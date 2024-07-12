@@ -71,3 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### CI/CD
 1.0.1 - added policy beanstalkmulticontainerdocker, webtier, workertier for aws user github actions
+1.0.2 - added policy beanstalkadministratoraccess for aws user github actions
+
