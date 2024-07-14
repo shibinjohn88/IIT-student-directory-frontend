@@ -1,5 +1,5 @@
 # Build stage
-FROM node:16-alpine as build-stage
+FROM node:20-alpine as build-stage
 
 # Set working directory
 WORKDIR /studentdirectory-react-js
@@ -11,7 +11,7 @@ COPY . .
 RUN npm install && npm run build
 
 # Production stage
-FROM nginx:1.22.1-alpine as prod-stage
+FROM nginx:1.26.1-alpine as prod-stage
 
 # Expose port 80
 EXPOSE 80
