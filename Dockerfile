@@ -4,11 +4,17 @@ FROM node:20-alpine as build-stage
 # Set working directory
 WORKDIR /studentdirectory-react-js
 
-# Copy all files to the working directory
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install 
+
+# Copy the rest of the application code to the working directory
 COPY . .
 
-# Install dependencies and build the project
-RUN npm install && npm run build
+# build the project
+RUN npm run build
 
 # Production stage
 FROM nginx:1.26.1-alpine as prod-stage
