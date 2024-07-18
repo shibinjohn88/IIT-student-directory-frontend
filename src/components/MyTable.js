@@ -10,7 +10,7 @@ function MyTable() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`http://localhost:3001/api/students`);
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/students`);
             const data = await response.json();
             setStudentList(data)
           } catch (error) {
