@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+**User Story**
+As an administrator, I want to add, edit, and delete student records so that the student database is always up to date.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Acceptance Criteria**
 
-## Available Scripts
+**Add Student Record:**
 
-In the project directory, you can run:
+- Form Fields: The add student form should include fields for the student's first name, last name, date of birth, email and grade
 
-### `npm start`
+- Validation: All required fields must be completed before the form can be submitted. The form should display an error message for any missing or incorrectly formatted fields.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Confirmation: Upon successful addition, the system should display a confirmation message and update the student database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Database Update: The new student record should be saved in the database and be retrievable by the student ID.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Edit Student Record:**
 
-### `npm run build`
+- Search Functionality: The system should allow administrators to edit a student record by student ID.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Edit Form: The edit form should pre-populate with the existing details of the selected student.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Validation: All required fields must be validated before the form can be submitted.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Confirmation: Upon successful editing, the system should display a confirmation message and update the student database.
 
-### `npm run eject`
+- Database Update: The edited student record should be saved in the database.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Delete Student Record:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Search Functionality: The system should allow administrators to delete a student record by student ID
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Deletion Confirmation: Upon confirmation, the system should display a message indicating that the student record has been successfully deleted.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Database Update: The student record should be removed from the database and no longer retrievable.
