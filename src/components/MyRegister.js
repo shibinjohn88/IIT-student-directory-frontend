@@ -38,12 +38,12 @@ function MyRegister() {
                 grade: '',
                 email: '',
             });
-            setSuccess('successfully submitted form')
+            setSuccess('Successfully submitted form. Continue to submit another registration or go to directory to see the new registration in record.')
             console.log(success)
             setError(null)
         }
         else {
-            setError('An error occured')
+            setError('An error occured. Please try again')
             setSuccess(null)
         }
         
@@ -66,7 +66,10 @@ function MyRegister() {
     <>
     <h3 className="student-register">New Student Registration</h3>
     <Form onSubmit={handleSubmit} className="student-register">
-        
+
+                {error && <Alert variant="danger">{error}</Alert>}
+                {success && <Alert variant="success">{success}</Alert>}
+
                 <Form.Group as={Col} controlId="formFirstName">
                     <Form.Label>First Name</Form.Label>
                     <Form.Control
@@ -122,9 +125,7 @@ function MyRegister() {
                 />
             </Form.Group>
 
-            {error && <Alert variant="danger">{error}</Alert>}
-            {success && <Alert variant="success">{success}</Alert>}
-
+            
             <Button variant="primary" type="submit">
                 Submit
             </Button>

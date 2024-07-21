@@ -9,7 +9,7 @@ function MyNavBar() {
     <>
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">ABC School</Navbar.Brand>
+          <Navbar.Brand href="/">ABC School</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Directory</Nav.Link>
             <Nav.Link href="/register">Register</Nav.Link>
