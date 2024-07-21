@@ -14,6 +14,7 @@ function MyNavBar() {
             <Nav.Link href="/">Directory</Nav.Link>
             <Nav.Link href="/register">Register</Nav.Link>
             <Nav.Link href="/unregister">Unregister</Nav.Link>
+            <Nav.Link href="/edit">Edit</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
