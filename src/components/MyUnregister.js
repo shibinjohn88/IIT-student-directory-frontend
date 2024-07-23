@@ -54,7 +54,7 @@ function MyUnregister () {
 
     return (
         <>
-            <h3 className="student-unregister">Unregister Old Student</h3>
+            <h3 className="student">Unregister Old Student</h3>
             <Form onSubmit={handleSubmit} className="student-unregister">
 
                 {error && <Alert variant="danger">{error}</Alert>}
@@ -72,7 +72,7 @@ function MyUnregister () {
                         max={2000}
                     />
                 </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className="submit">
                 Submit
             </Button>
         </Form>

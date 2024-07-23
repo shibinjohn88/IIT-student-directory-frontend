@@ -64,7 +64,7 @@ function MyRegister() {
 
   return (
     <>
-    <h3 className="student-register">New Student Registration</h3>
+    <h3 className="student">New Student Registration</h3>
     <Form onSubmit={handleSubmit} className="student-register">
 
                 {error && <Alert variant="danger">{error}</Alert>}
@@ -78,6 +78,7 @@ function MyRegister() {
                         name="firstname"
                         value={formData.firstname}
                         onChange={handleChange}
+                        required={true}
                     />
                 </Form.Group>
 
@@ -89,6 +90,7 @@ function MyRegister() {
                         name="lastname"
                         value={formData.lastname}
                         onChange={handleChange}
+                        required={true}
                     />
                 </Form.Group>
             
@@ -100,6 +102,7 @@ function MyRegister() {
                     name="dob"
                     value={formData.dob}
                     onChange={handleChange}
+                    required={true}
                 />
             </Form.Group>
 
@@ -111,6 +114,7 @@ function MyRegister() {
                     name="grade"
                     value={formData.grade}
                     onChange={handleChange}
+                    required={true}
                 />
             </Form.Group>
 
@@ -122,11 +126,12 @@ function MyRegister() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    required={true}
                 />
             </Form.Group>
 
             
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className="submit">
                 Submit
             </Button>
         </Form>

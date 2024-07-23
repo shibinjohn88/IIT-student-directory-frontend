@@ -103,7 +103,7 @@ function MyEdit () {
     return (
         
         <>
-            <h3 className="student-edit">Edit Student Record</h3>
+            <h3 className="student">Edit Student Record</h3>
             {/* show studentid search form */}
             {foundId === false && (
             <Form onSubmit={handleSubmit} className="student-edit">
@@ -122,7 +122,7 @@ function MyEdit () {
                         max={2000}
                     />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className="submit">
                     Submit
                 </Button>
             </Form>
@@ -143,6 +143,7 @@ function MyEdit () {
                         value={formEditData.firstname}
                         name="firstname"
                         onChange={handleEditChange}
+                        required={true}
                     />
                 </Form.Group>
 
@@ -153,6 +154,7 @@ function MyEdit () {
                         value={formEditData.lastname}
                         name="lastname"
                         onChange={handleEditChange}
+                        required={true}
                     />
                 </Form.Group>
             
@@ -164,6 +166,7 @@ function MyEdit () {
                     value={formEditData.dob}
                     name="dob"
                     onChange={handleEditChange}
+                    required={true}
                 />
             </Form.Group>
 
@@ -174,6 +177,7 @@ function MyEdit () {
                     value={formEditData.grade}
                     name="grade"
                     onChange={handleEditChange}
+                    required={true}
                 />
             </Form.Group>
 
@@ -184,9 +188,10 @@ function MyEdit () {
                     name="email"
                     value={formEditData.email}
                     onChange={handleEditChange}
+                    required={true}
                 />
             </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className="submit">
                     Submit
                 </Button>
             </Form>
