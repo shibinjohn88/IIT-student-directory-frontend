@@ -1,36 +1,32 @@
-**User Story**
 
-As an administrator, I want to add, edit, and delete student records so that the student database is always up to date.
+# Student Directory Frontend
 
-**Acceptance Criteria**
+Frontend for web application ABC School Student Directory. 
 
-**Add Student Record:**
+## Development
 
-- Form Fields: The add student form should include fields for the student's first name, last name, date of birth, email and grade
+Application uses React framework and Bootstrap for css styling. 
 
-- Validation: All required fields must be completed before the form can be submitted. The form should display an error message for any missing or incorrectly formatted fields.
+## Continous Deployment
 
-- Confirmation: Upon successful addition, the system should display a confirmation message and update the student database.
+Application is deployed to AWS Elastic Beanstalk using github actions. Whenever there is a push to master branch application will be automatically deployed to Elastic Beanstalk.
+.github/eb.yml is the github action workflow file used for continous deployment. 
 
-- Database Update: The new student record should be saved in the database and be retrievable by the student ID.
+## Container
+
+Application uses docker container. The file docker-compose.yml is used to make a docker container using nginx image and nginx.conf configuration file. 
+
+## Web Server
+
+Application is served by nginx web server. React build folder is served by nginx server using port 80. 
+
+## Backend 
+
+Backend used for this application is Student Directory Backend.
+https://github.com/shibinjohn88/IIT-student-directory-backend 
+
+## Application URL
+
+URL: http://samplereactapp.us-east-1.elasticbeanstalk.com/
 
 
-**Edit Student Record:**
-
-- Search Functionality: The system should allow administrators to edit a student record by student ID.
-
-- Edit Form: The edit form should pre-populate with the existing details of the selected student.
-
-- Validation: All required fields must be validated before the form can be submitted.
-
-- Confirmation: Upon successful editing, the system should display a confirmation message and update the student database.
-
-- Database Update: The edited student record should be saved in the database.
-
-**Delete Student Record:**
-
-- Search Functionality: The system should allow administrators to delete a student record by student ID
-
-- Deletion Confirmation: Upon confirmation, the system should display a message indicating that the student record has been successfully deleted.
-
-- Database Update: The student record should be removed from the database and no longer retrievable.
