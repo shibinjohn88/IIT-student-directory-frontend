@@ -173,11 +173,13 @@ function MyEdit () {
             <Form.Group controlId="formGrade">
                 <Form.Label>Grade</Form.Label>
                 <Form.Control
-                    type="text"
+                    type="number"
                     value={formEditData.grade}
                     name="grade"
                     onChange={handleEditChange}
                     required={true}
+                    min="9"
+                    max="12"
                 />
             </Form.Group>
 

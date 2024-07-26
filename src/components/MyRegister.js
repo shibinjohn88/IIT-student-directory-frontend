@@ -109,12 +109,14 @@ function MyRegister() {
             <Form.Group controlId="formGrade">
                 <Form.Label>Grade</Form.Label>
                 <Form.Control
-                    type="text"
+                    type="number"
                     placeholder="Enter grade"
                     name="grade"
                     value={formData.grade}
                     onChange={handleChange}
                     required={true}
+                    min="9"
+                    max="12" 
                 />
             </Form.Group>
 
